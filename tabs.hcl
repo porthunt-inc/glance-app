@@ -10,3 +10,10 @@ resource "terminal" "terminal" {
   shell             = "/bin/bash"
   working_directory = "/app"
 }
+
+resource "service" "browser" {
+  target = resource.container.glance
+  scheme = "http"
+  port   = 8080
+  path   = ""
+}

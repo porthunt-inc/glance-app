@@ -3,26 +3,19 @@ resource "layout" "single_panel" {
 }
 
 
-resource "layout" "editor-terminal-instructions" {
+
+
+
+resource "layout" "browser" {
   column {
-    width = "71"
-    row {
-      height = "50"
-      tab "editor" {
-        title  = "editor"
-        target = resource.editor.editor
-      }
-    }
-    row {
-      height = "50"
-      tab "terminal" {
-        title  = "terminal"
-        target = resource.terminal.terminal
-      }
+    width = "73"
+    tab "browser" {
+      title  = "browser"
+      target = resource.service.browser
     }
   }
   column {
-    width = "29"
+    width = "27"
     instructions {
       title = "Instructions"
     }

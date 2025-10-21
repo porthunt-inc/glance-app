@@ -9,4 +9,40 @@ resource "lab" "main" {
       show_timer = true
     }
   }
+  content {
+    chapter "using-glance" {
+      title = "Using Glance"
+      page "introduction" {
+        title     = "Introduction"
+        reference = resource.page.introduction
+      }
+      page "navigating-the-dashboard" {
+        title     = "Navigating the Dashboard"
+        reference = resource.page.navigating-the-dashboard
+        layout    = resource.layout.browser
+      }
+    }
+    chapter "understanding-widgets" {
+      title = "Understanding Widgets"
+      page "common-widget-types" {
+        title     = "Common Widget Types"
+        reference = resource.page.common-widget-types
+      }
+      page "widget-properties" {
+        title     = "Widget Properties"
+        reference = resource.page.widget-properties
+      }
+    }
+    chapter "adding-widgets" {
+      title = "Adding Widgets"
+      page "adding-a-widget" {
+        title     = "Adding a Widget"
+        reference = resource.page.adding-a-widget
+      }
+      page "verifying-widgets" {
+        title     = "Verifying Widgets"
+        reference = resource.page.verifying-widgets
+      }
+    }
+  }
 }
