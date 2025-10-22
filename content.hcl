@@ -28,7 +28,21 @@ resource "page" "adding-a-widget" {
   file  = "instructions/adding-widgets/adding-a-widget.md"
 }
 
-resource "page" "verifying-widgets" {
-  title = "Verifying Widgets"
-  file  = "instructions/adding-widgets/verifying-widgets.md"
+
+resource "page" "test-your-skills" {
+  title = "Test your skills!"
+  file  = "instructions/using-glance/test-your-skills.md"
+  activities = {
+    "general" = resource.quiz.general
+  }
+}
+
+resource "page" "adding-a-page" {
+  title = "Adding a Page"
+  file  = "instructions/pages--columns/adding-a-page.md"
+}
+
+resource "page" "working-with-columns" {
+  title = "Working with Columns"
+  file  = "instructions/pages--columns/working-with-columns.md"
 }

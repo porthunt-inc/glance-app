@@ -8,10 +8,13 @@ resource "layout" "single_panel" {
 
 resource "layout" "browser" {
   column {
-    width = "73"
+    width = "27"
     tab "browser" {
       title  = "browser"
       target = resource.service.browser
+    }
+    instructions {
+      title = "Instructions"
     }
   }
   column {
