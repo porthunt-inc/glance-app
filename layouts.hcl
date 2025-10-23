@@ -1,6 +1,3 @@
-resource "layout" "single_panel" {
-  column {}
-}
 
 
 
@@ -39,6 +36,15 @@ resource "layout" "layout_1" {
   }
   column {
     width = "50"
+    instructions {
+      title = "Instructions"
+    }
+  }
+}
+
+resource "layout" "single_panel" {
+  column {
+    width = "100"
     instructions {
       title = "Instructions"
     }
