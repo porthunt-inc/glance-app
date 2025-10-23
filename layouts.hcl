@@ -24,3 +24,23 @@ resource "layout" "browser" {
     }
   }
 }
+
+
+resource "layout" "layout_1" {
+  column {
+    width = "50"
+    tab "terminal" {
+      title  = "terminal"
+      target = resource.terminal.terminal
+    }
+    instructions {
+      title = "Instructions"
+    }
+  }
+  column {
+    width = "50"
+    instructions {
+      title = "Instructions"
+    }
+  }
+}

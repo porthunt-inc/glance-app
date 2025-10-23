@@ -27,6 +27,7 @@ resource "lab" "main" {
       page "adding-a-page" {
         title     = "Adding a Page"
         reference = resource.page.adding-a-page
+        layout    = resource.layout.layout_1
       }
       page "working-with-columns" {
         title     = "Working with Columns"
