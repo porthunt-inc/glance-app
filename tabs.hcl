@@ -5,15 +5,16 @@ resource "editor" "editor" {
   }
 }
 
-resource "terminal" "terminal" {
-  target            = resource.container.glance
-  shell             = "/bin/bash"
-  working_directory = "/app"
-}
 
 resource "service" "browser" {
   target = resource.container.glance
   scheme = "http"
   port   = 8080
   path   = ""
+}
+
+resource "terminal" "terminal" {
+  target            = resource.container.ubuntu
+  shell             = ""
+  working_directory = "/app"
 }

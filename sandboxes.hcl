@@ -17,3 +17,19 @@ resource "container" "glance" {
     group = "root"
   }
 }
+
+resource "container" "ubuntu" {
+  image {
+    name = "ubuntu:22.04"
+  }
+  resources {
+    memory = 256
+  }
+  health_check {
+    timeout = "30s"
+  }
+  run_as {
+    user  = "root"
+    group = "root"
+  }
+}

@@ -40,6 +40,9 @@ resource "layout" "layout_1" {
       title  = "terminal"
       target = resource.terminal.terminal
     }
+    instructions {
+      title = "Instructions"
+    }
   }
   column {
     width = "50"
