@@ -6,12 +6,7 @@ resource "editor" "editor" {
 }
 
 
-resource "service" "browser" {
-  target = resource.container.glance
-  scheme = "http"
-  port   = 8080
-  path   = ""
-}
+
 
 
 
@@ -19,6 +14,13 @@ resource "service" "browser" {
 
 resource "terminal" "terminal" {
   target            = resource.container.glance
-  shell             = ""
+  shell             = "/bin/sh"
   working_directory = "/app/config"
+}
+
+resource "service" "browser" {
+  target = resource.container.glance
+  scheme = "http"
+  port   = 8080
+  path   = "/"
 }
