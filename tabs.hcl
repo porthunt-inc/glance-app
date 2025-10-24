@@ -15,8 +15,9 @@ resource "service" "browser" {
 
 
 
+
 resource "terminal" "terminal" {
-  target            = resource.container.ubuntu
+  target            = resource.container.glance
   shell             = ""
   working_directory = "/"
 }
