@@ -13,8 +13,10 @@ resource "service" "browser" {
   path   = ""
 }
 
+
+
 resource "terminal" "terminal" {
   target            = resource.container.ubuntu
   shell             = ""
-  working_directory = "/app"
+  working_directory = "/"
 }
