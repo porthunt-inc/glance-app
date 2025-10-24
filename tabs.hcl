@@ -16,8 +16,9 @@ resource "service" "browser" {
 
 
 
+
 resource "terminal" "terminal" {
   target            = resource.container.glance
   shell             = ""
-  working_directory = "/"
+  working_directory = "/app/config"
 }
