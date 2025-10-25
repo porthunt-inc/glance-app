@@ -3,11 +3,11 @@ resource "task" "check-widgets" {
   condition "check-widget" {
     description = "Add a widget to your yaml file"
     check {
-      script = "scripts/check-widgets/check-widget_check0"
+      script = "scripts/check-widgets/check-widget_check1"
     }
   }
   config {
-    working_directory = "/app/config"
+    working_directory = ""
     user              = ""
     group             = ""
     timeout           = ""
