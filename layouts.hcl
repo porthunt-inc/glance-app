@@ -3,24 +3,6 @@
 
 
 
-resource "layout" "browser" {
-  column {
-    width = "27"
-    tab "browser" {
-      title  = "browser"
-      target = resource.service.browser
-    }
-    instructions {
-      title = "Instructions"
-    }
-  }
-  column {
-    width = "27"
-    instructions {
-      title = "Instructions"
-    }
-  }
-}
 
 
 
@@ -33,9 +15,31 @@ resource "layout" "single_panel" {
   }
 }
 
+
+resource "layout" "browser" {
+  column {
+    width = "24"
+    tab "browser" {
+      title  = "browser"
+      target = resource.service.browser
+    }
+    instructions {
+      title = "Instructions"
+    }
+  }
+  column {
+    width = "24"
+    instructions {
+      title = "Instructions"
+    }
+  }
+}
+
+
+
 resource "layout" "layout_1" {
   column {
-    width = "50"
+    width = "45"
     tab "terminal" {
       title  = "terminal"
       target = resource.terminal.terminal
@@ -45,7 +49,7 @@ resource "layout" "layout_1" {
     }
   }
   column {
-    width = "50"
+    width = "45"
     instructions {
       title = "Instructions"
     }

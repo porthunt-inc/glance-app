@@ -31,6 +31,7 @@ resource "lab" "main" {
       page "adding-a-widget" {
         title     = "Adding a Widget"
         reference = resource.page.adding-a-widget
+        layout    = resource.layout.layout_1
       }
       page "widget-properties" {
         title     = "Widget Properties"
