@@ -22,22 +22,6 @@ resource "lab" "main" {
         reference = resource.page.navigating-the-dashboard
       }
     }
-    chapter "pages--columns" {
-      title = "Pages & Columns"
-      page "adding-a-page" {
-        title     = "Adding a Page"
-        reference = resource.page.adding-a-page
-        layout    = resource.layout.layout_1
-      }
-      page "working-with-columns" {
-        title     = "Working with Columns"
-        reference = resource.page.working-with-columns
-      }
-      page "test-your-skills" {
-        title     = "Test your skills!"
-        reference = resource.page.test-your-skills
-      }
-    }
     chapter "understanding-widgets" {
       title = "Understanding Widgets"
       page "common-widget-types" {
@@ -51,6 +35,17 @@ resource "lab" "main" {
       page "widget-properties" {
         title     = "Widget Properties"
         reference = resource.page.widget-properties
+      }
+    }
+    chapter "pages--columns" {
+      title = "Pages & Columns"
+      page "working-with-columns" {
+        title     = "Working with Columns"
+        reference = resource.page.working-with-columns
+      }
+      page "test-your-skills" {
+        title     = "Test your skills!"
+        reference = resource.page.test-your-skills
       }
     }
   }

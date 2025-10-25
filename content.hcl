@@ -26,6 +26,9 @@ resource "page" "widget-properties" {
 resource "page" "adding-a-widget" {
   title = "Adding a Widget"
   file  = "instructions/adding-widgets/adding-a-widget.md"
+  activities = {
+    "check-widgets" = resource.task.check-widgets
+  }
 }
 
 
@@ -37,10 +40,6 @@ resource "page" "test-your-skills" {
   }
 }
 
-resource "page" "adding-a-page" {
-  title = "Adding a Page"
-  file  = "instructions/pages--columns/adding-a-page.md"
-}
 
 resource "page" "working-with-columns" {
   title = "Working with Columns"
