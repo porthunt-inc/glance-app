@@ -1,0 +1,17 @@
+ #!/bin/sh
+ set -e
+ 
+ CONFIG_FILE="glance.yml"
+ 
+ # 1. Validate YAML syntax
+ if ! yq eval '.' "$CONFIG_FILE" >/dev/null 2>&1; then
+     exit 1
+ fi
+ 
+ # 2. Count 'widget' occurrences
+ WIDGET_COUNT=$(yq eval '.. | select(has("widgets")) | .widgets | length' "$CONFIG_FILE" 2>/dev/null | awk '{s+=$1} END {print s+0}')
+ 
+ 
+ if [ "$WIDGET_COUNT" -ne 6 ]; then
+     exit 1
+ fi

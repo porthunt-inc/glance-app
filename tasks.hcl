@@ -3,8 +3,7 @@ resource "task" "check-widgets" {
   condition "check-widget" {
     description = "Add a widget to your yaml file"
     check {
-      script          = "scripts/check-widgets/check-widget_check0"
-      failure_message = "Yaml file is broken or doesn't contain ONE more widget"
+      script = "scripts/check-widgets/check-widget_check1"
     }
   }
   config {
