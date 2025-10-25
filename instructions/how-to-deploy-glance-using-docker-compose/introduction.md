@@ -9,3 +9,5 @@ By the end of this lab, you will be able to:
 
 > [!NOTE]
 > Think of Glance as your personal control center for all your important information.
+
+a
