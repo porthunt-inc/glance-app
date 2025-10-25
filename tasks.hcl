@@ -7,4 +7,17 @@ resource "task" "check-widgets" {
       failure_message = "Yaml file is broken or doesn't contain ONE more widget"
     }
   }
+  config {
+    working_directory = "/app/config"
+    user              = ""
+    group             = ""
+    timeout           = ""
+    parallel_exec {
+      condition = false
+      check     = false
+      solve     = false
+      setup     = false
+      cleanup   = false
+    }
+  }
 }
