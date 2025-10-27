@@ -6,22 +6,6 @@
 
 
 
-resource "layout" "single_panel" {
-  column {
-    width = "100"
-    instructions {
-      title = "Instructions"
-    }
-    tab "browser" {
-      title  = "browser"
-      target = resource.service.browser
-    }
-    tab "terminal" {
-      title  = "terminal"
-      target = resource.terminal.terminal
-    }
-  }
-}
 
 
 
@@ -63,6 +47,20 @@ resource "layout" "layout_1" {
     width = "50"
     instructions {
       title = "Instructions"
+    }
+  }
+}
+
+resource "layout" "single_panel" {
+  column {
+    width = "100"
+    tab "browser" {
+      title  = "browser"
+      target = resource.service.browser
+    }
+    tab "terminal" {
+      title  = "terminal"
+      target = resource.terminal.terminal
     }
   }
 }
