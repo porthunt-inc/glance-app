@@ -12,6 +12,14 @@ resource "layout" "single_panel" {
     instructions {
       title = "Instructions"
     }
+    tab "browser" {
+      title  = "browser"
+      target = resource.service.browser
+    }
+    tab "terminal" {
+      title  = "terminal"
+      target = resource.terminal.terminal
+    }
   }
 }
 
