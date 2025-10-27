@@ -54,6 +54,9 @@ resource "layout" "browser" {
       title  = "browser"
       target = resource.service.browser
     }
+    instructions {
+      title = "Instructions"
+    }
   }
   column {
     width = "50"
