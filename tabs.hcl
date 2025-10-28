@@ -24,3 +24,8 @@ resource "service" "browser" {
   port   = 8080
   path   = "/"
 }
+
+resource "external_website" "something" {
+  url                = "https://google.com"
+  open_in_new_window = false
+}
