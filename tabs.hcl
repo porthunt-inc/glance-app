@@ -25,7 +25,8 @@ resource "service" "browser" {
   path   = "/"
 }
 
+
 resource "external_website" "something" {
-  url                = "https://google.com"
-  open_in_new_window = false
+  url                = "https://play.instruqt.dev"
+  open_in_new_window = true
 }
