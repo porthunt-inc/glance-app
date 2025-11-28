@@ -2,6 +2,11 @@
 resource "page" "introduction" {
   title = "Introduction"
   file  = "instructions/how-to-deploy-glance-using-docker-compose/introduction.md"
+
+  variables = {
+    foobar = "this is an inserted variable"
+    image = resource.container.glance.image.name
+  }
 }
 
 
