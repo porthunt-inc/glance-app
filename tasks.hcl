@@ -7,10 +7,6 @@ resource "task" "check-widgets" {
     }
   }
   config {
-    working_directory = ""
-    user              = ""
-    group             = ""
-    timeout           = ""
     parallel_exec {
       condition = false
       check     = false

@@ -21,15 +21,14 @@ resource "layout" "single_panel" {
 
 
 
+
+
 resource "layout" "browser" {
   column {
     width = "50"
     tab "browser" {
       title  = "browser"
       target = resource.service.browser
-    }
-    instructions {
-      title = "Instructions"
     }
   }
   column {
@@ -40,16 +39,27 @@ resource "layout" "browser" {
   }
 }
 
+
 resource "layout" "layout_1" {
   column {
-    width = "50"
-    tab "terminal" {
-      title  = "terminal"
-      target = resource.terminal.terminal
+    width = "73"
+    row {
+      height = "73"
+      tab "editor" {
+        title  = "editor"
+        target = resource.editor.editor
+      }
+    }
+    row {
+      height = "27"
+      tab "terminal" {
+        title  = "terminal"
+        target = resource.terminal.terminal
+      }
     }
   }
   column {
-    width = "50"
+    width = "27"
     instructions {
       title = "Instructions"
     }
