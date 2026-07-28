@@ -5,13 +5,6 @@ resource "editor" "editor" {
   }
 }
 
-
-
-
-
-
-
-
 resource "terminal" "terminal" {
   target            = resource.container.glance
   shell             = "/bin/sh"

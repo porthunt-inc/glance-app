@@ -1,4 +1,3 @@
-
 resource "container" "ubuntu" {
   image {
     name = "ubuntu:22.04"
@@ -20,8 +19,8 @@ resource "container" "glance" {
     name = "porthunt/glance-app"
   }
   port {
-    local = "8080"
-    host  = "8080"
+    local = 0
+    host  = 0
   }
   resources {
     memory = 256

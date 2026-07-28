@@ -1,12 +1,20 @@
 resource "quiz" "general" {
-  questions = [resource.text_answer_question.text, resource.numeric_answer_question.number, resource.single_choice_question.widgets]
+  questions = [
+    resource.text_answer_question.text,
+    resource.numeric_answer_question.number,
+    resource.single_choice_question.widgets
+  ]
 }
 
 resource "single_choice_question" "single" {
-  question    = "Which of these statements about Glance widgets is TRUE?"
-  answer      = "Widgets can be arranged in columns within a page."
-  distractors = ["Widgets can only display RSS feeds. ", "Each page can only have one widget.", "Widgets automatically run Python scripts."]
-  hints       = []
+  question = "Which of these statements about Glance widgets is TRUE?"
+  answer   = "Widgets can be arranged in columns within a page."
+  distractors = [
+    "Widgets can only display RSS feeds. ",
+    "Each page can only have one widget.",
+    "Widgets automatically run Python scripts."
+  ]
+  hints = []
 }
 
 resource "multiple_choice_question" "multi" {

@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 resource "layout" "single_panel" {
   column {
     width = "100"
@@ -14,14 +6,6 @@ resource "layout" "single_panel" {
     }
   }
 }
-
-
-
-
-
-
-
-
 
 resource "layout" "browser" {
   column {
@@ -38,7 +22,6 @@ resource "layout" "browser" {
     }
   }
 }
-
 
 resource "layout" "layout_1" {
   column {
