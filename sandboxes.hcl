@@ -19,8 +19,8 @@ resource "container" "glance" {
     name = "porthunt/glance-app"
   }
   port {
-    local = 0
-    host  = 0
+    local = 80
+    host  = 80
   }
   resources {
     memory = 256
